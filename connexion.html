@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+    <link rel="stylesheet" href="connexion.css">
+    <title>FORMULAIRE D'INSCRIPTION</title>
+</head>
+<body>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenue</h2>
+                <p>Pour rejoindre notre communauté, veuillez vous connecter avec vos coordonnées</p>
+                <input type="button" value="connectez-vous" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Créer un compte</h2>
+                <!-- Formulaire d'inscription -->
+                <form class="form form-register" novalidate action="connx.php" method="POST">
+                    <div>
+                        <label>
+                            <i class='bx bx-face'></i>
+                            <input type="text" placeholder="Nom" name="nom" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-face'></i>
+                            <input type="text" placeholder="Prenom" name="prenom" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" placeholder="adresseemail" name="userEmail" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="motdepasse" name="userPassword" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-phone'></i>
+                            <input type="number" placeholder="Telephone" name="userphone" required>
+                        </label>
+                    </div>
+                    <input type="submit" value="Se connecter" name="signup">
+                    <div class="alerta-error">Tous les champs sont obligatoires</div>
+                    <div class="alerta-exito">Vous vous êtes inscrit avec succès</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div class="container-form login hide">
+    <div class="information">
+        <div class="info-childs">
+            <h2>Accueillir à nouveau!!</h2>
+            <p>Pour rejoindre notre communauté, veuillez vous connecter avec vos coordonnées</p>
+            <input type="button" value="inscrivez-vous" id="sign-up">
+        </div>
+    </div>
+    <div class="form-information">
+        <div class="form-information-childs">
+            <h2>Se connecter</h2>
+            <p>Connectez-vous à votre compte</p>
+
+            <!-- Modifications effectuées ici -->
+            <form class="form form-login" action="connx.php" method="POST" novalidate>
+                <div>
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Adresse email" name="Email" required>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Mot de passe" name="MotDePasse" required>
+                    </label>
+                </div>
+                <input type="submit" value="connecter" name="login">
+                <div class="alerta-error">Tous les champs sont obligatoires</div>
+                <div class="alerta-exito">Vous vous êtes inscrit avec succès</div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="connexion.js"></script>
+
